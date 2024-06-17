@@ -1,9 +1,9 @@
+import { createElement } from "../../../../utils/createElement.js";
 import { Header } from "./Header/Header.js";
 import { Main } from "./Main/Main.js";
 
 export function App(someData) {
-  const container = document.createElement("div");
-  container.classList.add("App");
+  const container = createElement("div", { class: "App" });
 
   container.append(Header(), Main(someData));
 

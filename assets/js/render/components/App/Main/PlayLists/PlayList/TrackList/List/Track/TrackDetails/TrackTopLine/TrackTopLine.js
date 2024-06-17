@@ -1,26 +1,19 @@
 import { ButtonsEditDelete } from "../../../../../../../../../common/ButtonsEditDelete/ButtonsEditDelete.js";
+import { createElement } from "../../../../../../../../../../../../utils/createElement.js";
 
 export function TrackTopLine(someRestTrackData) {
   const { isHot, artistName, trackTitle } = someRestTrackData;
 
-  const container = document.createElement("div");
-  container.classList.add("track-top-line");
+  const container = createElement("div", { class: "track-top-line" });
 
   if (isHot) {
-    const trackHotImg = document.createElement("img");
-    trackHotImg.classList.add("track-status");
-    trackHotImg.src = "./assets/images/icons/hot.svg";
-    trackHotImg.setAttribute("alt", "hot");
+    const trackHotImg = createElement("img", { class: "track-status", src: "./assets/images/icons/hot.svg", alt: "hot" });
 
     container.append(trackHotImg);
   }
 
-  const trackInfo = document.createElement("div");
-  trackInfo.classList.add("track-info");
-
-  const trackName = document.createElement("div");
-  trackName.classList.add("track-name");
-  trackName.innerText = `${artistName} - ${trackTitle}`;
+  const trackInfo = createElement("div", { class: "track-info" });
+  const trackName = createElement("div", { class: "track-name", innerText: `${artistName} - ${trackTitle}` });
 
   trackInfo.append(trackName, ButtonsEditDelete());
   container.append(trackInfo);

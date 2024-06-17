@@ -1,16 +1,10 @@
+import { createElement } from "../../../../../utils/createElement.js";
+
 export function Header() {
-  const header = document.createElement("header");
-
-  const headerContainer = document.createElement("div");
-  headerContainer.classList.add("header-container");
-
-  const img = document.createElement("img");
-  img.src = "./assets/images/logo/logo.svg";
-  img.setAttribute("alt", "logo");
-
-  const logo = document.createElement("div");
-  logo.classList.add("logo-name");
-  logo.innerText = "InPlayer";
+  const header = createElement("header");
+  const headerContainer = createElement("div", { class: "header-container" });
+  const img = createElement("img", { src: "./assets/images/logo/logo.svg", alt: "logo" });
+  const logo = createElement("div", { class: "logo-name", innerText: "InPlayer" });
 
   headerContainer.append(img, logo);
   header.append(headerContainer);

@@ -1,15 +1,11 @@
+import { createElement } from "../../../../../../../../../../utils/createElement.js";
 import { TrackDetails } from "./TrackDetails/TrackDetails.js";
 
 export function Track(someTrack) {
   const { trackCoverImgUrl, ...restTrackData } = someTrack;
 
-  const container = document.createElement("li");
-  container.classList.add("track-element");
-
-  const trackCoverImg = document.createElement("img");
-  trackCoverImg.classList.add("track-cover-image");
-  trackCoverImg.src = trackCoverImgUrl;
-  trackCoverImg.setAttribute("alt", "track-cover");
+  const container = createElement("li", { class: "track-element" });
+  const trackCoverImg = createElement("img", { class: "track-cover-image", src: trackCoverImgUrl, alt: "track-cover" });
 
   container.append(trackCoverImg, TrackDetails(restTrackData));
 
