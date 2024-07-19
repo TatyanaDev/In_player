@@ -1,13 +1,13 @@
 import { ButtonsEditDelete } from "../../../../../../../../../common/ButtonsEditDelete/ButtonsEditDelete.js";
 import { createElement } from "../../../../../../../../../../../../utils/createElement.js";
 
-export function TrackTopLine(someRestTrackData) {
-  const { isHot, artistName, trackTitle } = someRestTrackData;
+export function TrackTopLine(data) {
+  const { isHot, artistName, trackTitle } = data;
 
   const container = createElement("div", { class: "track-top-line" });
 
   if (isHot) {
-    const trackHotImg = createElement("img", { class: "track-status", src: "./assets/images/icons/hot.svg", alt: "hot" });
+    const trackHotImg = createElement("img", { class: "track-status", src: "./assets/icons/hot.svg", alt: "hot" });
 
     container.append(trackHotImg);
   }

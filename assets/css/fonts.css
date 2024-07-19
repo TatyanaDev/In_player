@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../font//RedHatDisplay/RedHatDisplay-Italic-Latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../font//RedHatDisplay/RedHatDisplay-Italic-LatinExt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../font//RedHatDisplay/RedHatDisplay-Normal-Latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("../font//RedHatDisplay/RedHatDisplay-Normal-LatinExt.woff2") format("woff2");
+}

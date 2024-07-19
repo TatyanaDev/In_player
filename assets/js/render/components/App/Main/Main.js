@@ -1,11 +1,11 @@
-import { AddPlaylistPanel } from "./AddPlaylistPanel/AddPlaylistPanel.js";
+import { AddPlayListPanel } from "./AddPlayListPanel/AddPlayListPanel.js";
 import { createElement } from "../../../../../utils/createElement.js";
 import { PlayLists } from "./PlayLists/PlayLists.js";
 
-export function Main(someData) {
-  const container = createElement("main");
+export function Main(data) {
+  const container = createElement("main", { class: "main" });
 
-  container.append(AddPlaylistPanel(), PlayLists(someData));
+  container.append(AddPlayListPanel(), PlayLists(data));
 
   return container;
 }

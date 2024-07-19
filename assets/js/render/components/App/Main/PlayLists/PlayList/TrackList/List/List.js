@@ -1,11 +1,11 @@
 import { createElement } from "../../../../../../../../../utils/createElement.js";
 import { Track } from "./Track/Track.js";
 
-export function List(someTracks) {
+export function List(data) {
   const container = createElement("ul", { class: "list" });
 
-  for (let i = 0; i < someTracks.length; i++) {
-    container.append(Track(someTracks[i]));
+  for (let i = 0; i < data.length; i++) {
+    container.append(Track(data[i]));
   }
 
   return container;

@@ -1,11 +1,13 @@
 import { createElement } from "../../../../../../utils/createElement.js";
 import { PlayList } from "./PlayList/PlayList.js";
 
-export function PlayLists(someData) {
-  const container = createElement("div", { class: "playlists" });
+export function PlayLists(data) {
+  const { playlists } = data;
 
-  for (let i = 0; i < someData.playlists.length; i++) {
-    container.append(PlayList(someData.playlists[i]));
+  const container = createElement("section", { class: "playlists" });
+
+  for (let i = 0; i < playlists.length; i++) {
+    container.append(PlayList(playlists[i]));
   }
 
   return container;

@@ -1,8 +1,8 @@
 import { ButtonsEditDelete } from "../../../../../common/ButtonsEditDelete/ButtonsEditDelete.js";
 import { createElement } from "../../../../../../../../utils/createElement.js";
 
-export function PlaylistInfo(somePlaylistInfo) {
-  const { coverImgUrl, title, tracksCount } = somePlaylistInfo;
+export function PlayListInfo(data) {
+  const { coverImgUrl, title, tracksCount } = data;
 
   const container = createElement("div", { class: "playlist-info" });
   const img = createElement("img", { class: "playlist-cover-image", src: coverImgUrl, alt: "cover" });
